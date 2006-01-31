@@ -9,15 +9,17 @@
     
     <version name="0.1d" url="http://openacs.org/repository/download/apm/dotlrn-ae-0.1d.apm">
         <owner url="mailto:annyflores@viaro.net">Anny Flores</owner>
-        <release-date>2004-10-19</release-date>
+        <summary>dotLRN package for anonymous course evaluations</summary>
+        <release-date>2006-01-31</release-date>
+        <maturity>0</maturity>
 
         <provides url="dotlrn-ae" version="0.1d"/>
-        <requires url="dotlrn" version="1.0"/>
         <requires url="ae-portlet" version="0.1d"/>
+        <requires url="dotlrn" version="1.0"/>
 
         <callbacks>
-            <callback type="before-uninstall"  proc="dotlrn_ae::uninstall"/>
             <callback type="after-install"  proc="dotlrn_ae::install"/>
+            <callback type="before-uninstall"  proc="dotlrn_ae::uninstall"/>
         </callbacks>
         <parameters>
         <!-- No version parameters -->
